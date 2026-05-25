@@ -1,0 +1,65 @@
+version: 1
+generated_at: 2026-05-25T13:39:07Z
+internal: []
+trusted:
+  - action: actions/checkout
+    refs:
+      - v4
+    occurrences:
+      v4:
+        .github/workflows/ci.yml:
+          - jobs.check.steps.[0].uses
+          - jobs.clippy.steps.[0].uses
+          - jobs.fmt.steps.[0].uses
+          - jobs.test.steps.[0].uses
+          - jobs.build.steps.[0].uses
+          - jobs.check-version.steps.[0].uses
+          - jobs.release.steps.[0].uses
+        .github/workflows/sync-upstream.yml:
+          - jobs.sync.steps.[0].uses
+  - action: actions/download-artifact
+    refs:
+      - v4
+    occurrences:
+      v4:
+        .github/workflows/ci.yml:
+          - jobs.release.steps.[1].uses
+  - action: actions/upload-artifact
+    refs:
+      - v4
+    occurrences:
+      v4:
+        .github/workflows/ci.yml:
+          - jobs.build.steps.[7].uses
+external:
+  - action: dtolnay/rust-toolchain
+    refs:
+      - stable
+    occurrences:
+      stable:
+        .github/workflows/ci.yml:
+          - jobs.check.steps.[1].uses
+          - jobs.clippy.steps.[1].uses
+          - jobs.fmt.steps.[1].uses
+          - jobs.test.steps.[1].uses
+          - jobs.build.steps.[1].uses
+  - action: softprops/action-gh-release
+    refs:
+      - v2
+    occurrences:
+      v2:
+        .github/workflows/ci.yml:
+          - jobs.release.steps.[3].uses
+  - action: Swatinem/rust-cache
+    refs:
+      - v2
+    occurrences:
+      v2:
+        .github/workflows/ci.yml:
+          - jobs.check.steps.[2].uses
+          - jobs.clippy.steps.[2].uses
+          - jobs.test.steps.[2].uses
+          - jobs.build.steps.[3].uses
+local: []
+docker: []
+dynamic: []
