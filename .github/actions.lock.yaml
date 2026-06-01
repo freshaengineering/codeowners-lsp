@@ -1,5 +1,5 @@
 version: 1
-generated_at: 2026-05-25T13:39:07Z
+generated_at: 2026-06-01T09:37:11Z
 internal: []
 trusted:
   - action: actions/checkout
@@ -45,16 +45,16 @@ external:
           - jobs.build.steps.[1].uses
   - action: softprops/action-gh-release
     refs:
-      - v2
+      - 3bb12739c298aeb8a4eeaf626c5b8d85266b0e65
     occurrences:
-      v2:
+      3bb12739c298aeb8a4eeaf626c5b8d85266b0e65:
         .github/workflows/ci.yml:
           - jobs.release.steps.[3].uses
   - action: Swatinem/rust-cache
     refs:
-      - v2
+      - e18b497796c12c097a38f9edb9d0641fb99eee32
     occurrences:
-      v2:
+      e18b497796c12c097a38f9edb9d0641fb99eee32:
         .github/workflows/ci.yml:
           - jobs.check.steps.[2].uses
           - jobs.clippy.steps.[2].uses
