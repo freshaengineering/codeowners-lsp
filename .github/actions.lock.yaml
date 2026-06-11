@@ -1,12 +1,12 @@
 version: 1
-generated_at: 2026-05-25T13:39:07Z
+generated_at: 2026-06-11T15:37:26Z
 internal: []
 trusted:
   - action: actions/checkout
     refs:
-      - v4
+      - 34e114876b0b11c390a56381ad16ebd13914f8d5
     occurrences:
-      v4:
+      34e114876b0b11c390a56381ad16ebd13914f8d5:
         .github/workflows/ci.yml:
           - jobs.check.steps.[0].uses
           - jobs.clippy.steps.[0].uses
@@ -19,24 +19,24 @@ trusted:
           - jobs.sync.steps.[0].uses
   - action: actions/download-artifact
     refs:
-      - v4
+      - d3f86a106a0bac45b974a628896c90dbdf5c8093
     occurrences:
-      v4:
+      d3f86a106a0bac45b974a628896c90dbdf5c8093:
         .github/workflows/ci.yml:
           - jobs.release.steps.[1].uses
   - action: actions/upload-artifact
     refs:
-      - v4
+      - ea165f8d65b6e75b540449e92b4886f43607fa02
     occurrences:
-      v4:
+      ea165f8d65b6e75b540449e92b4886f43607fa02:
         .github/workflows/ci.yml:
           - jobs.build.steps.[7].uses
 external:
   - action: dtolnay/rust-toolchain
     refs:
-      - stable
+      - 29eef336d9b2848a0b548edc03f92a220660cdb8
     occurrences:
-      stable:
+      29eef336d9b2848a0b548edc03f92a220660cdb8:
         .github/workflows/ci.yml:
           - jobs.check.steps.[1].uses
           - jobs.clippy.steps.[1].uses
@@ -45,16 +45,16 @@ external:
           - jobs.build.steps.[1].uses
   - action: softprops/action-gh-release
     refs:
-      - v2
+      - 3bb12739c298aeb8a4eeaf626c5b8d85266b0e65
     occurrences:
-      v2:
+      3bb12739c298aeb8a4eeaf626c5b8d85266b0e65:
         .github/workflows/ci.yml:
           - jobs.release.steps.[3].uses
   - action: Swatinem/rust-cache
     refs:
-      - v2
+      - e18b497796c12c097a38f9edb9d0641fb99eee32
     occurrences:
-      v2:
+      e18b497796c12c097a38f9edb9d0641fb99eee32:
         .github/workflows/ci.yml:
           - jobs.check.steps.[2].uses
           - jobs.clippy.steps.[2].uses
